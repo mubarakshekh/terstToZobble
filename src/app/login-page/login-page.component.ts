@@ -36,7 +36,7 @@ export class LoginPageComponent implements OnInit {
       this._apiservice.loginDetails(this.userName, this.password)
         .subscribe(
           data => {
-            if(data.id == 0 && data.id == null){
+            if(data.id == 0 || data.id == null){
               this.serverError = data.AuthFailedMessage
             }
             else{
