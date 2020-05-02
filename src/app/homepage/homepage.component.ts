@@ -23,7 +23,6 @@ export class HomepageComponent implements OnInit {
     this._apiservice.userdata.subscribe(
       message=> {
         this.data = message;
-        console.log(message,'message from login')
       }
     )
 

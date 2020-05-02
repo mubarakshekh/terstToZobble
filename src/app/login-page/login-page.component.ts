@@ -27,7 +27,6 @@ export class LoginPageComponent implements OnInit {
 
   submitLogin(event) {
     event.preventDefault()
-    // console.log(event)
 
     if (this.userName && this.password) {
       this.serverError = ''
@@ -41,7 +40,6 @@ export class LoginPageComponent implements OnInit {
             }
             else{
               this.users = data;
-              console.log(data, 'inside')
               this._apiservice.sendData(data)
               this.router.navigate(['/dashboard']);
 
